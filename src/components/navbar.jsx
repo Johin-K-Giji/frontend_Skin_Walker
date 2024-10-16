@@ -24,7 +24,7 @@ const Header = () => {
             </div>
 
             {/* Main Navigation Bar */}
-            <div className=" py-4 px-8 flex justify-between items-center rounded-t-3xl ">
+            <div className=" py-4 px-8 flex justify-between items-center rounded-t-3xl bg-white ">
                 {/* Logo */}
                 <div className="w-24 h-24">
                     <img
@@ -35,23 +35,10 @@ const Header = () => {
                 </div>
 
                 {/* Menu Items */}
-                <nav className="flex gap-8 text-gray-800 font-medium">
+                <nav className="flex gap-12 text-gray-800 font-semibold text-xl">
                     <a href="/" className="hover:text-black">Home</a>
                     <a href="/about" className="hover:text-black">About</a>
-                    <div className="relative group">
-                        <button className="hover:text-black flex items-center">
-                            Products <span className="ml-1"><RiArrowDropDownLine size={14} /></span>
-                        </button>
-                        {/* Dropdown Menu */}
-                        <div className="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-md rounded-md">
-                            <a href="/products/product1" className="block px-4 py-2 hover:bg-gray-200">
-                                Product 1
-                            </a>
-                            <a href="/products/product2" className="block px-4 py-2 hover:bg-gray-200">
-                                Product 2
-                            </a>
-                        </div>
-                    </div>
+                    <a href="/about" className="hover:text-black">Products</a>
                     <a href="/contact" className="hover:text-black">Contact</a>
                 </nav>
 
@@ -60,7 +47,7 @@ const Header = () => {
                     href="/path-to-brochure.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-md"
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-4 rounded-2xl  "
                 >
                     Brochure
                 </a>
