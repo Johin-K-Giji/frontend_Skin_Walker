@@ -1,13 +1,12 @@
 // src/App.jsx
 import React from "react";
-import Header from "./components/navbar";
-import Carousel from "./components/carousel";
+
+import Home from "./pages/home";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Carousel/>
+      <Home/>
     </div>
   );
 }
