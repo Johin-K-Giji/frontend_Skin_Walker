@@ -4,6 +4,7 @@ import Carousel from '../components/carousel'
 import Footer from '../components/footer'
 import { motion } from 'framer-motion';
 
+
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -11,10 +12,19 @@ const fadeInUp = {
 };
 
 const Home = () => {
+
+  const circlesData = [
+    { size: '150px', top: '-50px', left: '-50px' },
+    { size: '200px', top: '100px', right: '-70px' },
+    { size: '180px', bottom: '50px', left: '30%' },
+    { size: '250px', bottom: '-100px', right: '10%' },
+  ];
+
   return (
-    <div className='bg-[#FFFCF3]'>
+    <div className='bg-white'>
       <Header />
       <Carousel />
+      
       <motion.div
         className="relative min-h-screen w-full mt-12 overflow-hidden"
         variants={fadeInUp}
@@ -42,7 +52,7 @@ const Home = () => {
             {/* Content Section on Top */}
             <div className='relative flex flex-col items-center justify-start w-full h-[500px] px-4 md:px-8'>
               {/* White Section with Logo and Text */}
-              <div className='md:bg-[#FFFCF3] bg-white w-full max-w-[900px] rounded-3xl md:rounded-t-3xl flex flex-col md:flex-row 
+              <div className='md:bg-white bg-white w-full max-w-[900px] rounded-3xl md:rounded-t-3xl flex flex-col md:flex-row 
         items-center justify-center mt-5 px-4 py-6 gap-4'>
                 <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
                   <img
@@ -95,7 +105,7 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="bg-[#FFFCF3] py-16 px-4 md:px-20">
+        <div className="bg-white py-16 px-4 md:px-20">
           <h2 className="text-2xl  md:text-3xl font-bold text-center uppercase mb-10 ">
             Best Sellers
           </h2>

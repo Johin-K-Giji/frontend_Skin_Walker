@@ -1,0 +1,19 @@
+.organic-circles-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure circles don't break out of the container */
+    z-index: -1; /* Send the entire container behind the content */
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1; /* Ensure circles are behind the main content */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .circle:hover {
+    transform: scale(1.1); /* Optional: Add a little hover effect */
+  }
+  

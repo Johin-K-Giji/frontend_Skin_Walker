@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaClock, FaPhoneAlt, FaEnvelope, FaInstagram, FaWhatsap
 
 const Footer = () => {
     return (
-      <footer className="bg-[#BCE7F0] py-12 px-6 md:px-16">
+      <footer className="bg-[#393939] py-12 px-6 md:px-16 text-white">
         {/* Contact Info Section */}
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 text-center md:text-left">
           

@@ -16,7 +16,7 @@ const Carousel = () => {
     };
 
     return (
-        <section className="w-full h-[600px] bg-[#FFFCF3] flex items-center justify-center">
+        <section className="w-full h-[600px] bg-white flex items-center justify-center">
             {/* Desktop Wrapper */}
             <motion.div
                 initial="hidden"
@@ -100,23 +100,54 @@ const Carousel = () => {
                             animate="visible"
                         >
                             <div className="flex-1">
-                                <h1 className="text-6xl font-extrabold text-black mb-4 grid grid-cols-1 gap-2">
+                                <motion.h1 className="text-6xl font-extrabold text-black mb-4 grid grid-cols-1 gap-4">
                                     <span>ORGANIC</span>
                                     <span>COMES</span>
                                     <span>KNOCKING</span>
-                                </h1>
+                                </motion.h1>
                                 <p className="text-gray-600 mb-4 font-medium">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 </p>
-                                <button className="bg-black text-white px-6 py-2 rounded-xl">See Products</button>
+                                <motion.button
+                                    variants={bounceIn}
+                                    className="bg-black text-white px-6 py-3 rounded-xl font-bold uppercase"
+                                >
+                                    See Products
+                                </motion.button>
                             </div>
-                            <div className="flex-1 flex flex-row">
-                                <img src="./Carousel-1.png" alt="Milk Bottle" className="w-[300px]" />
+
+                            <motion.div
+                                className="flex-1 flex flex-row"
+                                initial="hidden"
+                                animate="visible"
+                                variants={bounceIn}
+                            >
+                                <img
+                                    src="./Carousel-1.png"
+                                    alt="Milk Bottle"
+                                    className="w-[300px] animate-slowBounce"
+                                />
                                 <div className="flex flex-col ml-4 gap-6">
-                                    <div className="w-[200px] h-[130px] bg-[#CA1E50] rounded-3xl"></div>
-                                    <div className="w-[200px] h-[130px] bg-[#144A88] rounded-3xl"></div>
+                                    <div className="w-[200px] h-[130px] bg-[#CA1E50] rounded-3xl flex items-center justify-center">
+                                        <img src="./cproduct1.png" className="w-[80px] h-[90px]" alt="Milk Powder" />
+                                        <div className="flex flex-col items-center">
+                                            <span className="font-bold text-white">Milk Powder</span>
+                                            <span className="text-white underline underline-offset-8 cursor-pointer text-sm">
+                                                Explore
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="w-[200px] h-[130px] bg-[#144A88] rounded-3xl flex items-center justify-center">
+                                        <img src="./cproduct2.png" className="w-[80px]" alt="Ghee" />
+                                        <div className="flex flex-col items-center">
+                                            <span className="font-bold text-white">Original Ghee</span>
+                                            <span className="text-white underline underline-offset-8 cursor-pointer text-sm">
+                                                Explore
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </SwiperSlide>
                 </Swiper>
