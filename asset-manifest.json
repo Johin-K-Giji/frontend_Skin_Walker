@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/frontend_Skin_Walker/static/css/main.d01172a9.css",
-    "main.js": "/frontend_Skin_Walker/static/js/main.43b29c98.js",
+    "main.js": "/frontend_Skin_Walker/static/js/main.e000622d.js",
     "static/js/453.8ab44547.chunk.js": "/frontend_Skin_Walker/static/js/453.8ab44547.chunk.js",
     "index.html": "/frontend_Skin_Walker/index.html",
     "main.d01172a9.css.map": "/frontend_Skin_Walker/static/css/main.d01172a9.css.map",
-    "main.43b29c98.js.map": "/frontend_Skin_Walker/static/js/main.43b29c98.js.map",
+    "main.e000622d.js.map": "/frontend_Skin_Walker/static/js/main.e000622d.js.map",
     "453.8ab44547.chunk.js.map": "/frontend_Skin_Walker/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d01172a9.css",
-    "static/js/main.43b29c98.js"
+    "static/js/main.e000622d.js"
   ]
 }
