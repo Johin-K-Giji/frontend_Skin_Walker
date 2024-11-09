@@ -71,9 +71,9 @@ const AboutUs = () => {
         {/* Focus Section */}
         <h2 className="text-center text-4xl font-bold mb-12">Our Focus On</h2>
         <motion.div className="flex flex-col gap-2" variants={sectionVariants}>
-          <FocusCard imgSrc="/aboutf3.png" title="100% Organic" text="Lorem Ipsum is simply dummy text." />
-          <FocusCard imgSrc="/aboutf4.png" title="Quality" text="Lorem Ipsum has been the industry's standard." reverse />
-          <FocusCard imgSrc="/aboutf5.png" title="Best Price" text="Lorem Ipsum used in typesetting industry." />
+          <FocusCard imgSrc="aboutf3.png" title="100% Organic" text="Lorem Ipsum is simply dummy text." />
+          <FocusCard imgSrc="aboutf4.png" title="Quality" text="Lorem Ipsum has been the industry's standard." reverse />
+          <FocusCard imgSrc="aboutf5.png" title="Best Price" text="Lorem Ipsum used in typesetting industry." />
         </motion.div>
 
         {/* Processing Section */}
@@ -107,11 +107,12 @@ const AboutUs = () => {
 };
 
 const FocusCard = ({ imgSrc, title, text, reverse }) => (
+  
   <motion.div
     className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8`}
     variants={itemVariants}
   >
-    <img src={imgSrc} alt={title} className="w-36 h-36" />
+    <img src={`./${imgSrc}`} alt={title} className="w-36 h-36" />
     <div className="text-center md:text-left">
       <h3 className="font-bold text-xl mb-2">{title}</h3>
       <p className="text-gray-600">{text}</p>

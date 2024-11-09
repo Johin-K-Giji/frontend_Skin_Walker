@@ -12,7 +12,7 @@ const products = Array(50).fill({
   id: 1,
   name: 'Walker Protein Ghee',
   price: 'Rs 500 ',
-  image: '/cproduct1.png',
+  image: 'cproduct1.png',
 });
 
 // Animation Variants
@@ -94,7 +94,7 @@ const Products = () => {
                 <FiShare2 className="text-gray-500 cursor-pointer hover:text-green-600" />
               </div>
               <img
-                src={product.image}
+                src={`./${product.image}`}
                 alt={product.name}
                 className="w-20 h-20 object-contain mb-4"
               />

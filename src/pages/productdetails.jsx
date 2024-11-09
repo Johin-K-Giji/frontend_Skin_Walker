@@ -20,15 +20,15 @@ const ProductDetails = () => {
     <div className="flex items-center justify-between gap-6">
       {/* Product Thumbnails */}
       <div className="p-4 bg-[#F5F5F5] rounded-xl shadow-md hover:scale-105 transform transition-all">
-        <img src="/cproduct1.png" alt="Product" className="md:w-32 md:h-32 w-12 h-12rounded-lg" />
+        <img src="./cproduct1.png" alt="Product" className="md:w-32 md:h-32 w-12 h-12rounded-lg" />
       </div>
 
       <div className="p-4 bg-[#F5F5F5] rounded-xl shadow-md hover:scale-105 transform transition-all">
-        <img src="/cproduct2.png" alt="Product" className="w-24 h-24 rounded-lg" />
+        <img src="./cproduct2.png" alt="Product" className="w-24 h-24 rounded-lg" />
       </div>
 
       <div className="p-4 bg-[#F5F5F5] rounded-xl shadow-md hover:scale-105 transform transition-all">
-        <img src="/cproduct1.png" alt="Product" className="w-24 h-24 rounded-lg" />
+        <img src="./cproduct1.png" alt="Product" className="w-24 h-24 rounded-lg" />
       </div>
 
       {/* View All Images Link */}
