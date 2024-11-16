@@ -1,21 +1,12 @@
-// src/pages/Products.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { FiSearch, FiShare2 } from 'react-icons/fi';
 import Header from '../components/navbar';
 import Footer from '../components/footer';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 
-// Sample Product Data
-const products = Array(50).fill({
-  id: 1,
-  name: 'Walker Protein Ghee',
-  price: 'Rs 500 ',
-  image: 'cproduct1.png',
-});
-
-// Animation Variants
 const pageVariants = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -27,10 +18,23 @@ const cardVariants = {
 };
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
 
   const itemsPerPage = window.innerWidth < 768 ? 30 : 9;
   const pageCount = Math.ceil(products.length / itemsPerPage);
+
+  useEffect(() => {
+    // Fetch products from the backend
+    axios.get('http://localhost:5000/view_products')
+      .then(response => {
+        setProducts(response.data.products); // Assuming the data format is { products: [...] }
+        
+      })
+      .catch(error => {
+        console.error("There was an error fetching the products!", error);
+      });
+  }, []);
 
   const currentProducts = products.slice(
     currentPage * itemsPerPage,
@@ -84,9 +88,9 @@ const Products = () => {
           animate="animate"
           variants={cardVariants}
         >
-          {currentProducts.map((product, index) => (
+          {currentProducts.map((product) => (
             <motion.div
-              key={index}
+              key={product.id}
               className="bg-white border border-gray-300 rounded-lg shadow-md p-4 flex flex-col items-center hover:shadow-lg transition-shadow duration-300"
               whileHover={{ scale: 1.05 }}
             >
@@ -106,7 +110,7 @@ const Products = () => {
                 <span> per litre</span>
               </p>
               <Link
-                to="/details"
+                to={`/details/${product.id}`}
                 className="text-green-600 font-bold mt-2 hover:underline"
               >
                 View More
