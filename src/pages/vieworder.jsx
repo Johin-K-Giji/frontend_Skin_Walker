@@ -3,8 +3,8 @@ import axios from 'axios';
 import Sidebar from '../components/sidebar';
 import { FiSearch } from 'react-icons/fi';
 
-const ViewProducts = () => {
-  const [products, setProducts] = useState([]);
+const Vieworder = () => {
+  const [orders, setOrders] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [showEditModal, setShowEditModal] = useState(false);
   const [editProduct, setEditProduct] = useState(null);
@@ -15,9 +15,9 @@ const ViewProducts = () => {
   }, []);
 
   const fetchProducts = () => {
-    axios.get('http://localhost:5000/view_products')
+    axios.get('http://localhost:5000/view_orders')
       .then(response => {
-        setProducts(response.data.products);
+        setOrders(response.data.orders);
       })
       .catch(error => {
         console.error("Error fetching products:", error);
@@ -40,27 +40,7 @@ const ViewProducts = () => {
     setNewImages(files);
   };
 
-  const handleEditSubmit = () => {
-    const formData = new FormData();
-    formData.append('product_name', editProduct.name);
-    formData.append('product_price', editProduct.price);
-    formData.append('product_description', editProduct.description);
-    formData.append('product_benefits', editProduct.benefits);
-
-    // Add new images to the form data
-    newImages.forEach(image => {
-      formData.append('product_images', image);
-    });
-
-    axios.put(`http://localhost:5000/edit_product/${editProduct.id}`, formData)
-      .then(() => {
-        fetchProducts();
-        setShowEditModal(false);
-      })
-      .catch(error => {
-        console.error("Error updating product:", error);
-      });
-  };
+  
 
   const handleDeleteClick = (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
@@ -72,8 +52,8 @@ const ViewProducts = () => {
     }
   };
 
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProducts = orders.filter(order =>
+    order.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -86,7 +66,7 @@ const ViewProducts = () => {
         <div className="relative mb-6">
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder="Search Orders..."
             className="w-full max-w-sm p-2 pl-10 text-gray-700 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
@@ -99,48 +79,34 @@ const ViewProducts = () => {
             <tr className="bg-green-500 text-white text-left">
               <th className="p-4">ID</th>
               <th className="p-4">Name</th>
-              <th className="p-4">Price</th>
-              <th className="p-4">Description</th>
-              <th className="p-4">Benefits</th>
-              <th className="p-4">Images</th>
-              <th className="p-4">Actions</th>
+              <th className="p-4">Address</th>
+              <th className="p-4">Phone Number</th>
+              <th className="p-4">Pin Code</th>
+              <th className="p-4">Odered Date</th>
+              {/* <th className="p-4">Actions</th> */}
             </tr>
           </thead>
           <tbody>
             {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <tr key={product.id} className="border-b hover:bg-gray-50">
-                  <td className="p-4 text-gray-700">{product.id}</td>
-                  <td className="p-4 text-gray-700">{product.name}</td>
-                  <td className="p-4 text-gray-700">{product.price}</td>
-                  <td className="p-4 text-gray-700">{product.description}</td>
-                  <td className="p-4 text-gray-700">{product.benefits}</td>
-                  <td className="p-4">
-                    <div className="flex">
-                      {product.images.map((img, index) => (
-                        <img
-                          key={index}
-                          src={`http://localhost:5000/static/uploads/${img}`}
-                          alt="Product"
-                          className="w-12 h-12 object-cover rounded-lg mr-2"
-                        />
-                      ))}
-                    </div>
-                  </td>
-                  <td className="p-4">
-                    <button
-                      className="bg-blue-500 text-white px-3 py-1 rounded mr-2 hover:bg-blue-600"
-                      onClick={() => handleEditClick(product)}
-                    >
-                      Edit
-                    </button>
+              filteredProducts.map((order) => (
+                <tr key={order.id} className="border-b hover:bg-gray-50">
+                  <td className="p-4 text-gray-700">{order.id}</td>
+                  <td className="p-4 text-gray-700">{order.name}</td>
+                  <td className="p-4 text-gray-700">{order.address}</td>
+                  <td className="p-4 text-gray-700">{order.phone_no}</td>
+                  <td className="p-4 text-gray-700">{order.pin_code}</td>
+                  <td className="p-4 text-gray-700">{order.ordered_date}</td>
+
+
+                  {/* <td className="p-4">
+    
                     <button
                       className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                      onClick={() => handleDeleteClick(product.id)}
+                      onClick={() => handleDeleteClick(order.id)}
                     >
                       Delete
                     </button>
-                  </td>
+                  </td> */}
                 </tr>
               ))
             ) : (
@@ -151,7 +117,7 @@ const ViewProducts = () => {
           </tbody>
         </table>
 
-        {/* Edit Modal */}
+        {/* Edit Modal
         {showEditModal && editProduct && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
@@ -219,11 +185,11 @@ const ViewProducts = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
 };
 
-export default ViewProducts;
+export default Vieworder;
   

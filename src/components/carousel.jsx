@@ -3,6 +3,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { motion } from 'framer-motion';
+import Carousel1 from '../assets/images/Carousel-1.png'
+import cproduct1 from '../assets/images/cproduct1.png'
+import cproduct2 from '../assets/images/cproduct2.png'
+import feature1 from '../assets/images/feature1.png'
+import feature2 from '../assets/images/feature2.png'
+import feature3 from '../assets/images/feature3.png'
 
 const Carousel = () => {
     const fadeIn = {
@@ -63,13 +69,13 @@ const Carousel = () => {
                                 variants={bounceIn}
                             >
                                 <img
-                                    src="./Carousel-1.png"
+                                    src={Carousel1}
                                     alt="Milk Bottle"
                                     className="w-[300px] animate-slowBounce"
                                 />
                                 <div className="flex flex-col ml-4 gap-6">
                                     <div className="w-[200px] h-[130px] bg-[#CA1E50] rounded-3xl flex items-center justify-center">
-                                        <img src="./cproduct1.png" className="w-[80px] h-[90px]" alt="Milk Powder" />
+                                        <img src={cproduct1} className="w-[80px] h-[90px]" alt="Milk Powder" />
                                         <div className="flex flex-col items-center">
                                             <span className="font-bold text-white">Milk Powder</span>
                                             <span className="text-white underline underline-offset-8 cursor-pointer text-sm">
@@ -78,7 +84,7 @@ const Carousel = () => {
                                         </div>
                                     </div>
                                     <div className="w-[200px] h-[130px] bg-[#144A88] rounded-3xl flex items-center justify-center">
-                                        <img src="./cproduct2.png" className="w-[80px]" alt="Ghee" />
+                                        <img src={cproduct2} className="w-[80px]" alt="Ghee" />
                                         <div className="flex flex-col items-center">
                                             <span className="font-bold text-white">Original Ghee</span>
                                             <span className="text-white underline underline-offset-8 cursor-pointer text-sm">
@@ -154,13 +160,13 @@ const Carousel = () => {
 
                 <div className='grid grid-cols-3 place-items-center gap-4'>
 
-<div className='flex flex-row justify-center items-center gap-2'> <img src='./feature1.png' className='w-[50px] h-[50px]'></img>
+<div className='flex flex-row justify-center items-center gap-2'> <img src={feature1} className='w-[50px] h-[50px]'></img>
 <span className='font-bold'>High in Protien</span></div>
 
-<div className='flex flex-row justify-center items-center gap-2'> <img src='./feature2.png' className='w-[60px] h-[50px]'></img>
+<div className='flex flex-row justify-center items-center gap-2'> <img src={feature2} className='w-[60px] h-[50px]'></img>
 <span className='font-bold'>Fully Organic</span></div>
 
-<div className='flex flex-row justify-center items-center gap-2'> <img src='./feature3.png' className='w-[70px] h-[40px]'></img>
+<div className='flex flex-row justify-center items-center gap-2'> <img src={feature3} className='w-[70px] h-[40px]'></img>
 <span className='font-bold'>Fast Delivery</span></div>
 
 </div>

@@ -98,19 +98,19 @@ const Products = () => {
                 <FiShare2 className="text-gray-500 cursor-pointer hover:text-green-600" />
               </div>
               <img
-                src={`./${product.image}`}
+                src={`http://localhost:5000/static/uploads/${product.images[0]}`}
                 alt={product.name}
                 className="w-20 h-20 object-contain mb-4"
               />
               <h3 className="text-sm md:text-xl font-bold mb-1">
                 {product.name}
               </h3>
-              <p className="text-xs font-semibold text-black">
+              <p className="text-base font-semibold text-black">
                 {product.price}
                 <span> per litre</span>
               </p>
               <Link
-                to={`/details/${product.id}`}
+                to={`/product/${product.id}`}
                 className="text-green-600 font-bold mt-2 hover:underline"
               >
                 View More

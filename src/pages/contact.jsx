@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/navbar";
 import Footer from "../components/footer";
 import Circle from "../components/circle";
@@ -21,6 +21,13 @@ const circleAnimation = {
 };
 
 const ContactUs = () => {
+
+    const [ name, setName] = useState('')
+    const [address, setAddress] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('')
+
   return (
     <motion.div 
       className="relative min-h-screen bg-white overflow-hidden"

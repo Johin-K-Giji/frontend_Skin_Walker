@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import { NavLink } from "react-router-dom"; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

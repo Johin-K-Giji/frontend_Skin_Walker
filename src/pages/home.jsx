@@ -4,6 +4,19 @@ import Carousel from '../components/carousel'
 import Footer from '../components/footer'
 import { motion } from 'framer-motion';
 
+import cproduct1 from '../assets/images/cproduct1.png'
+import cproduct2 from '../assets/images/cproduct2.png'
+
+import aboutf1 from '../assets/images/aboutf1.png';
+import aboutf2 from '../assets/images/aboutf2.png';
+import aboutf3 from '../assets/images/aboutf3.png';
+import aboutf4 from '../assets/images/aboutf4.png';
+
+
+
+
+import { Link } from 'react-router-dom';
+
 
 // Animation variants
 const fadeInUp = {
@@ -12,6 +25,9 @@ const fadeInUp = {
 };
 
 const Home = () => {
+
+  
+    const icons = [aboutf1, aboutf2, aboutf3, aboutf4];
 
   const circlesData = [
     { size: '150px', top: '-50px', left: '-50px' },
@@ -35,7 +51,7 @@ const Home = () => {
         {/* Background Image */}
         <div
           className='hidden md:block absolute inset-0 bg-cover bg-center opacity-40 h-[700px]'
-          style={{ backgroundImage: "url('./aboutbg2.jpg')" }}
+          style={{ backgroundImage: "url('../assets/images/aboutbg2.jpg')" }}
         ></div>
 
         {/* Content Container */}
@@ -56,7 +72,7 @@ const Home = () => {
         items-center justify-center mt-5 px-4 py-6 gap-4'>
                 <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
                   <img
-                    src="./logo.png"
+                    src="logo.png"
                     alt="Logo"
                     className="rounded-full w-full h-full object-cover"
                   />
@@ -72,22 +88,21 @@ const Home = () => {
 
               {/* Icons Section */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-5 w-full max-w-[900px]'>
-                {['aboutf1.png', 'aboutf2.png', 'aboutf3.png', 'aboutf4.png'].map((icon, index) => (
-                  <div key={index} className="w-18 h-18 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center">
-                    <img
-                      src={`./${icon}`}
-                      alt={`Feature ${index + 1}`}
-                      className="w-12 h-12 md:h-24 md:w-24 object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-
+  {icons.map((icon, index) => (
+    <div key={index} className="w-18 h-18 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center">
+      <img
+        src={icon}
+        alt={`Feature ${index + 1}`}
+        className="w-12 h-12 md:h-24 md:w-24 object-cover"
+      />
+    </div>
+  ))}
+</div>
               {/* Discover More Button */}
               <div className='flex items-center justify-center w-full mt-10 md:mt-8'>
-                <button className="bg-black text-white px-2 py-2 md:px-6 md:py-3 rounded-xl font-bold uppercase">
+               <Link to='/products'> <button className="bg-black text-white px-2 py-2 md:px-6 md:py-3 rounded-xl font-bold uppercase">
                   Discover More
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
@@ -117,7 +132,7 @@ const Home = () => {
               <div className="bg-[#308472] rounded-2xl p-6 flex flex-col items-center mt-12 relative w-[300px] text-white">
                 <div className="relative -mt-20">
                   <img
-                    src="./cproduct1.png"
+                    src={cproduct2}
                     alt="Product 1"
                     className="w-40 h-40 object-contain relative z-10"
                   />
@@ -139,7 +154,7 @@ const Home = () => {
               <div className="bg-[#308472] rounded-2xl p-6 flex flex-col items-center mt-12 relative w-[300px] text-white">
                 <div className="relative -mt-20">
                   <img
-                    src="./cproduct1.png"
+                    src={cproduct1}
                     alt="Product 1"
                     className="w-40 h-40 object-contain relative z-10"
                   />
@@ -161,7 +176,7 @@ const Home = () => {
               <div className="bg-[#308472] rounded-2xl p-6 flex flex-col items-center mt-12 relative w-[300px] text-white">
                 <div className="relative -mt-20">
                   <img
-                    src="./cproduct1.png"
+                    src={cproduct1}
                     alt="Product 1"
                     className="w-40 h-40 object-contain relative z-10"
                   />
@@ -186,7 +201,7 @@ const Home = () => {
               <div className="bg-[#308472] rounded-2xl p-6 flex flex-col items-center relative w-[200px] h-[250px] text-white flex-shrink-0 snap-center mt-12">
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
                   <img
-                    src="./cproduct1.png"
+                    src={cproduct1}
                     alt="Product 1"
                     className="w-20 h-20 object-contain z-10"
                   />
@@ -209,7 +224,7 @@ const Home = () => {
               <div className="bg-[#308472] rounded-2xl p-6 flex flex-col items-center relative w-[200px] h-[250px] text-white flex-shrink-0 snap-center mt-12">
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
                   <img
-                    src="./cproduct1.png"
+                    src={cproduct2}
                     alt="Product 1"
                     className="w-20 h-20 object-contain z-10"
                   />
@@ -262,7 +277,7 @@ const Home = () => {
             className="absolute left-0 mt-24 bg-[#033D1E] w-[250px] h-[50px] md:w-[600px] md:h-[100px] flex justify-between items-center text-white px-6 rounded-r-lg  md:rounded-r-3xl"
           >
             <p className="text-xs md:text-xl font-medium">Take a Look on Organic</p>
-            <span className="text-sm md:text-2xl font-bold cursor-pointer">View All</span>
+           <Link to='/products'> <span className="text-sm md:text-2xl font-bold cursor-pointer">View All</span></Link>
 
           </div>
         </div>
