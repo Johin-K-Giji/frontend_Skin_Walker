@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/frontend_Skin_Walker/static/css/main.1329dfd2.css",
-    "main.js": "/frontend_Skin_Walker/static/js/main.84ccc453.js",
+    "main.js": "/frontend_Skin_Walker/static/js/main.f7dc8aba.js",
     "static/media/cproduct1.png": "/frontend_Skin_Walker/static/media/cproduct1.05ee90e31106206923a8.png",
+    "static/media/logo.png": "/frontend_Skin_Walker/static/media/logo.2ed838102e552b01a474.png",
     "static/media/cproduct2.png": "/frontend_Skin_Walker/static/media/cproduct2.2d81c8052fa2e16fed93.png",
     "static/media/feature3.png": "/frontend_Skin_Walker/static/media/feature3.5051e6b019036d9f7af9.png",
     "static/media/aboutf4.png": "/frontend_Skin_Walker/static/media/aboutf4.18a51eb774680c805a9e.png",
@@ -14,10 +15,10 @@
     "static/media/aboutf1.png": "/frontend_Skin_Walker/static/media/aboutf1.50fe77f43d50d28d19a7.png",
     "index.html": "/frontend_Skin_Walker/index.html",
     "main.1329dfd2.css.map": "/frontend_Skin_Walker/static/css/main.1329dfd2.css.map",
-    "main.84ccc453.js.map": "/frontend_Skin_Walker/static/js/main.84ccc453.js.map"
+    "main.f7dc8aba.js.map": "/frontend_Skin_Walker/static/js/main.f7dc8aba.js.map"
   },
   "entrypoints": [
     "static/css/main.1329dfd2.css",
-    "static/js/main.84ccc453.js"
+    "static/js/main.f7dc8aba.js"
   ]
 }
