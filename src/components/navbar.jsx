@@ -1,4 +1,4 @@
-// src/components/Header.jsx
+
 import React, { useState } from "react";
 import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -32,7 +32,7 @@ const Header = () => {
         {/* Logo */}
         <div className="w-16 h-16 md:w-24 md:h-24">
           <img
-            src="./logo.png" // Replace with actual logo path
+            src="./logo.png" 
             alt="Logo"
             className="rounded-full"
           />

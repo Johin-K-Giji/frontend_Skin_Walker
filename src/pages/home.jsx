@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 import cproduct1 from '../assets/images/cproduct1.png'
 import cproduct2 from '../assets/images/cproduct2.png'
-
+import logo from '../assets/images/logo.png'
 import aboutf1 from '../assets/images/aboutf1.png';
 import aboutf2 from '../assets/images/aboutf2.png';
 import aboutf3 from '../assets/images/aboutf3.png';
@@ -51,7 +51,7 @@ const Home = () => {
         {/* Background Image */}
         <div
           className='hidden md:block absolute inset-0 bg-cover bg-center opacity-40 h-[700px]'
-          style={{ backgroundImage: "url('../assets/images/aboutbg2.jpg')" }}
+          style={{ backgroundImage: {logo} }}
         ></div>
 
         {/* Content Container */}
@@ -72,7 +72,7 @@ const Home = () => {
         items-center justify-center mt-5 px-4 py-6 gap-4'>
                 <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
                   <img
-                    src="logo.png"
+                    src={logo}
                     alt="Logo"
                     className="rounded-full w-full h-full object-cover"
                   />

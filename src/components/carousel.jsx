@@ -129,13 +129,13 @@ const Carousel = () => {
                                 variants={bounceIn}
                             >
                                 <img
-                                    src="./Carousel-1.png"
+                                    src={cproduct1}
                                     alt="Milk Bottle"
                                     className="w-[300px] animate-slowBounce"
                                 />
                                 <div className="flex flex-col ml-4 gap-6">
                                     <div className="w-[200px] h-[130px] bg-[#CA1E50] rounded-3xl flex items-center justify-center">
-                                        <img src="./cproduct1.png" className="w-[80px] h-[90px]" alt="Milk Powder" />
+                                        <img src={cproduct1} className="w-[80px] h-[90px]" alt="Milk Powder" />
                                         <div className="flex flex-col items-center">
                                             <span className="font-bold text-white">Milk Powder</span>
                                             <span className="text-white underline underline-offset-8 cursor-pointer text-sm">
@@ -144,7 +144,7 @@ const Carousel = () => {
                                         </div>
                                     </div>
                                     <div className="w-[200px] h-[130px] bg-[#144A88] rounded-3xl flex items-center justify-center">
-                                        <img src="./cproduct2.png" className="w-[80px]" alt="Ghee" />
+                                        <img src={cproduct2} className="w-[80px]" alt="Ghee" />
                                         <div className="flex flex-col items-center">
                                             <span className="font-bold text-white">Original Ghee</span>
                                             <span className="text-white underline underline-offset-8 cursor-pointer text-sm">

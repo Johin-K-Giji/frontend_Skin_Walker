@@ -12,13 +12,14 @@ const sectionVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut', staggerChildren: 0.3 } },
 };
 
-// Variants for individual item animation
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-// Rotating circle animation
+
+
 const circleAnimation = {
   initial: { rotate: 0, opacity: 0 },
   animate: { rotate: 360, opacity: 0.7, transition: { duration: 3, repeat: Infinity, ease: 'linear' } },
@@ -30,12 +31,12 @@ const AboutUs = () => {
       className="relative min-h-screen bg-white overflow-hidden"
       initial="hidden"
       animate="visible"
-      variants={sectionVariants} // Animate the entire page
+      variants={sectionVariants} 
     >
       <Header />
 
       <div className="relative w-full min-h-screen px-8 md:px-24 py-16 overflow-hidden">
-        {/* Animated Circles */}
+        
         <motion.div
           variants={circleAnimation}
           className="absolute top-0 -left-16"
@@ -53,9 +54,10 @@ const AboutUs = () => {
           <motion.h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-8">
             About Us
           </motion.h1>
+          
           <motion.div 
             className="bg-[#DDFFED] border-l-4 border-green-500 p-6 rounded-md shadow-md w-full md:w-[700px]"
-            whileHover={{ scale: 1.05 }} // Subtle hover animation
+            whileHover={{ scale: 1.05 }} 
             variants={itemVariants}
           >
             <p className="text-gray-700 text-lg md:text-xl">
@@ -68,7 +70,7 @@ const AboutUs = () => {
           </motion.div>
         </motion.section>
 
-        {/* Focus Section */}
+
         <h2 className="text-center text-4xl font-bold mb-12">Our Focus On</h2>
         <motion.div className="flex flex-col gap-2" variants={sectionVariants}>
           <FocusCard imgSrc="aboutf3.png" title="100% Organic" text="Lorem Ipsum is simply dummy text." />
@@ -76,7 +78,7 @@ const AboutUs = () => {
           <FocusCard imgSrc="aboutf5.png" title="Best Price" text="Lorem Ipsum used in typesetting industry." />
         </motion.div>
 
-        {/* Processing Section */}
+
         <h2 className="text-center text-4xl font-bold mb-12 mt-16">Our Processing</h2>
         <motion.div 
           className="grid grid-cols-2 gap-10 sm:grid-cols-2 lg:grid-cols-4 mt-8"
@@ -88,7 +90,7 @@ const AboutUs = () => {
           <AnimatedCard number={4} text="Deliver to your Doorstep" icon={<FaTruck />} />
         </motion.div>
 
-        {/* Final Paragraph Section */}
+
         <motion.div 
           className="mt-16 p-8 bg-[#F0F0F0] rounded-md shadow-md text-center"
           whileHover={{ scale: 1.02 }}
